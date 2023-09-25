@@ -1,0 +1,151 @@
+<html>
+    <title>
+
+    </title>
+    <style>
+        body{
+            background-image: url("back.jpg");
+            color: lightcoral;
+            background-size: contain;
+            
+        }
+        table tr td{
+            font-size: 30px ;
+        }
+        table{
+            background-color: rgb(30, 87, 87);
+        }
+    </style>
+<body>
+        <div style="background-color: rgb(149, 140, 122);color: black;font-size: 30px;">
+            <center><i><b>REGISTRATION FORM</b></i></center></div>
+        <br><br>
+<center>
+    <script src="regis.js"></script>
+    <form onsubmit=" return valid()" action="save.php"></form>
+<table>
+    <tr>
+        <td>
+            First Name:
+        </td>
+    
+            <td><input type="text" pattern="[A-Za-z0-9]+" required title="Number not allow" placeholder="enter your name"></td>
+
+            <td>
+                Last Name:
+            </td>
+            <td>
+                <td><input type="text" pattern="[A-Za-z0-9]+" required title="Number not allow"></td>
+            </td>
+        </tr>
+    </tr>
+    <tr>
+        <td>
+            Photo:
+        </td>
+        <td>
+            <input type="file">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            DOB:
+        </td>
+        <td>
+            <input type="date">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Sex:
+        </td>
+        <td>
+            <input type="radio" name="gender" value="male"> Male <input type="radio" name="gender" value="female"> Female
+        </td>
+    </tr>
+    <tr>
+        <td>
+            E-Mail:
+        </td>
+        <td>
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Address:
+        </td>
+        <td>
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Board:
+        </td>
+        <td>
+            <select id="Boards">
+                <option value="none">Select Board</option>
+                <option value="icse">ICSE</option>
+                <option value="cbse">CBSE</option>
+                <option value="jac">JAC</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Department:
+        </td>
+        <td>
+            <select id="department">
+            <option value="none">Select Department</option>
+            <option value="computer">INFORMATIO TECHNOLOGY</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Course:
+        </td>
+        <td>
+            <select id="course">
+                <option value="none">Select Course</option>
+                <option value="bca">BCA</option>
+                <option value="it">IT</option>
+                <option value="bcm">BCM</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Mobile Number:
+        </td>
+        <td>
+            <input  type="number" min="1000000000" max="9999999999" id="m" onchange="valid()" title="Char are not allow">
+            <font id="m1" color="red" ></font>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Password:
+        </td>
+        <td><input type="text" id="e" onchange="valid()">
+            <font id="e1" color="red"></font></td>
+        
+        </td>
+    </tr>
+</table>
+<br><br>
+
+    <tr>
+    <td>
+        <input type="reset">
+    </td>
+    <td>
+        <input type="submit">
+    </td>
+</tr>
+</center>
+
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+    <title></title>
+    <style>
+        body{
+            background-image: url("back.jpg");
+            background-size: contain;
+        }
+        h1{
+            color: white;
+            font-weight: 40%;
+            font-size: 60px;
+        }
+    </style>
+<body>
+    <center>
+        <h1>NOTICE</h1>
+    </center>
+<script>
+    var x=1;
+    function a()
+    {
+        document.getElementById("clg").src="ntc"+x+".jpg";
+        x++;
+        if(x==5)
+        x=1;
+    }
+    setInterval(a,3000);
+    function f1()
+    {
+        document.getElementById("clg").src="ntc1.jpg";
+    }
+    function f2()
+    {
+        document.getElementById("clg").src="ntc2.jpg";
+    }
+    function f3()
+    {
+        document.getElementById("clg").src="ntc3.jpg";
+    }
+    function f4()
+    {
+        document.getElementById("clg").src="ntc4.jpg";
+    }
+</script>
+<center>
+
+        <img src="ntc1.jpg" id="clg" style="height: 300px;width: 700px;border: solid 9px;border-radius: 30px;border-color: #245124;">
+     
+<br>
+<table>
+    <tr>
+        <td>
+            <input type="radio" name="pic" onclick="f1()">
+            <input type="radio" name="pic" onclick="f2()">
+            <input type="radio" name="pic" onclick="f3()">
+            <input type="radio" name="pic" onclick="f4()">
+        </td>
+    </tr>
+</table>
+</center>
+</body>
+</html>

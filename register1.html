@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300;1,500&display=swap');
+
+        /* :root{
+    --green: green;
+    --black: black;
+    --light-color: #666;
+    --box-shadow: 0 .1rem 1rem rgb(181, 180, 180);
+    --border: 2rem solid rgba(0,0,0.1);
+    --outline: .1rem solid rgba(0,0,0.1);
+} */
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-padding-top: 7rem;
+        }
+
+        body {
+            background: #eee;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem 9%;
+            /* top/bottom and left/right */
+            background-color: white;
+            box-shadow: 0 .1rem 1rem rgb(206, 204, 204);
+
+        }
+
+        .header .logo {
+            font-size: 2.5rem;
+            font-weight: bolder;
+        }
+
+        .header .logo i {
+            color: rgb(76, 119, 7);
+        }
+
+        .header .navbar a {
+            font-size: 1.7rem;
+            margin: 0 1rem;
+            color: rgb(44, 45, 45);
+
+        }
+
+        .header .navbar a:hover {
+            color: green;
+        }
+
+        .header .icons div {
+            height: 4.5rem;
+            width: 4.5rem;
+            line-height: 4.5rem;
+            border-radius: .5rem;
+            background: #eee;
+            color: black;
+            font-size: 2rem;
+            margin-right: .3rem;
+            text-align: center;
+        }
+
+        .header .icons div:hover {
+            background-color: green;
+            color: white;
+            cursor: pointer;
+        }
+
+        #menu-btn {
+            display: none;
+        }
+
+
+        .header .search-form {
+            border: 0px solid;
+            position: absolute;
+            top: 110%;
+            right: -110%;
+            width: 50rem;
+            height: 4rem;
+            background: white;
+            border-radius: .5rem;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 .5rem .5rem rgb(181, 180, 180);
+
+        }
+
+        .header .search-form.active {
+            right: 2rem;
+            transition: .4s linear;
+        }
+
+        .header .search-form input {
+            height: 100%;
+            width: 100%;
+            padding: 1.5rem;
+            font-size: 1.6rem;
+        }
+
+        .header .search-form label {
+            font-size: 2.2rem;
+            padding: 1.5rem;
+            color: black;
+            cursor: pointer;
+        }
+
+        .header .search-form label:hover {
+
+            color: lightgreen;
+        }
+
+        /* .btn{
+    border: .2rem solid black;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    color: black;
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover{
+    background-color: green;
+    color: #fff;
+} */
+
+        .container p {
+            font-size: 16px;
+            font-weight: 100;
+
+        }
+
+
+        .header .login-form {
+            border: 1px solid;
+            position: absolute;
+            top: 110%;
+            right: -110%;
+            box-shadow: 0 .1rem 1rem rgb(181, 180, 180);
+            padding: 2rem;
+            border-radius: .5rem;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .header .login-form.active {
+            right: 2rem;
+            transition: .4s linear;
+        }
+
+        .header .login-form h3 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: black;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        /* Add padding to containers */
+        .container {
+            padding: 10px;
+        }
+
+        /* The "Forgot password" text */
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" class="login-form">
+        <h3> <b> Login now</b></h3>
+
+
+
+        <div class="imgcontainer">
+            <img src="img_avtar1.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="uname"></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <p> <b> Don't have an account</b> <a href="#"> <b> <big> Create Now</big></b></a></p>
+            <span class="psw"> <big>Forgot</big> <a href="#"><big><b> password?</b></big></a></span>
+        </div>
+
+    </form>
+</body>
+
+</html>
